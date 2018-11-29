@@ -1,0 +1,42 @@
+<ion-content padding class="login-page">
+  <ion-grid class="login-page__grid">
+    <ion-row justify-content-center>
+      <img
+        class="login-page__logo"
+        src="../../assets/imgs/logo_transparent.png"
+      />
+    </ion-row>
+    <ion-row align-items-center>
+      <ion-col>
+        <form>
+          <ion-item class="login-page__email-input">
+            <ion-icon name="mail" color="light" item-start></ion-icon>
+            <ion-input
+              type="text"
+              name="email"
+              placeholder="Email"
+              color="light"
+              required
+            ></ion-input>
+          </ion-item>
+          <ion-item class="login-page__password-input">
+            <ion-icon
+              name="lock"
+              color="white"
+              color="light"
+              item-start
+            ></ion-icon>
+            <ion-input
+              type="password"
+              name="password"
+              placeholder="Password"
+              required
+            ></ion-input>
+          </ion-item>
+          <button ion-button block margin-top large type="submit">Login</button>
+          <button ion-button clear block color="light">Sign Up</button>
+        </form>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
