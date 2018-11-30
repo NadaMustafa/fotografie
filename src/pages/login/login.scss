@@ -1,9 +1,5 @@
 .login-page {
     background-image: url(../../assets/imgs/background.jpg);
-    &__grid{
-        height: 100%;
-        justify-content: center;
-    }
     &__logo {
         object-fit: contain;
         height: 220px;
