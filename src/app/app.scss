@@ -33,3 +33,6 @@
 .toolbar-title-md, .toolbar-title-ios {
   color: map-get($colors, primary )
 }
+.toolbar-content-ios {
+  margin-top: 16px;
+}

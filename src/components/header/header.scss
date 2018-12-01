@@ -1,3 +1,10 @@
-header {
-
+.header-component {
+    &__logo-img {
+        width: 30px;
+        margin-left: 16px;
+    }
+    &__logo-name {
+        width: 105px;
+        padding: 9px;
+    }
 }
