@@ -1,6 +1,9 @@
 {
+  "defaultSeverity": "warning",
   "rules": {
     "no-duplicate-variable": true,
+    "indent": [true, "spaces", 2],
+    "no-console": [true, "log", "error"],
     "no-unused-variable": [
       true
     ]
