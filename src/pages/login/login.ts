@@ -10,7 +10,7 @@ export class LoginPage {
   @ViewChild('f') loginForm : NgForm;
   constructor(public navCtrl: NavController) {
   }
-  onLogin(form:NgForm){
-    console.log(form);
+  onLogin(form:NgForm) {
+    this.navCtrl.setRoot('TabsPage');
   }
 }

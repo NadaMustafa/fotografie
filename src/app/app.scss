@@ -18,3 +18,18 @@
 *::-webkit-scrollbar {
   display: none;
 }
+.tabs-md .tabbar, .tabs-ios .tabbar {
+  background: transparent;
+}
+.ion-page > ion-content {
+  background-color: $background-color; 
+}
+.tabs-md .tab-button-icon, .tabs-ios .tab-button-icon {
+  color: map-get($colors, light );
+}
+.toolbar-background-md, .toolbar-background-ios {
+  background: $background-color;
+}
+.toolbar-title-md, .toolbar-title-ios {
+  color: map-get($colors, primary )
+}
