@@ -1,12 +1,7 @@
+import { PostsService } from './../../app/services/posts/posts.service';
+import { Post } from '../../app/services/posts/post.model';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
-/**
- * Generated class for the HomePage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { IonicPage } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -14,12 +9,11 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'home.html',
 })
 export class HomePage {
-  items= [1,2,3,4];
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  posts: Post[];
+  
+  constructor(private postsService: PostsService){}
+  
+  ionViewWillEnter() {
+    this.posts = this.postsService.getPosts();
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
-  }
-
 }
