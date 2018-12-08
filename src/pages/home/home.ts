@@ -1,7 +1,7 @@
 import { PostsService } from './../../app/services/posts/posts.service';
 import { Post } from '../../app/services/posts/post.model';
 import { Component } from '@angular/core';
-import { IonicPage } from 'ionic-angular';
+import { IonicPage, ModalController } from 'ionic-angular';
 
 @IonicPage()
 @Component({
@@ -11,9 +11,14 @@ import { IonicPage } from 'ionic-angular';
 export class HomePage {
   posts: Post[];
   
-  constructor(private postsService: PostsService){}
+  constructor(private postsService: PostsService, private modalCtrl: ModalController){}
   
   ionViewWillEnter() {
     this.posts = this.postsService.getPosts();
+  }
+
+  showLikes(id: number) {
+    const modal = this.modalCtrl.create('likes-page', { id: id });
+    modal.present();
   }
 }

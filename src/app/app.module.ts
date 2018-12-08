@@ -1,3 +1,4 @@
+import { PostsService } from './services/posts/posts.service';
 import { LoginPage } from './../pages/login/login';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
@@ -24,6 +25,7 @@ import { MyApp } from './app.component';
   providers: [
     StatusBar,
     SplashScreen,
+    PostsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

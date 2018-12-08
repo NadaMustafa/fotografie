@@ -44,3 +44,6 @@
 .item-md, .item-ios {
   background-color: #f0f8ff;
 }
+.bar-button-default-md, .bar-button-default-ios{
+  color: map-get($colors , primary )
+}
