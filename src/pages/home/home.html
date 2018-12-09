@@ -26,7 +26,7 @@
         </button>
       </ion-col>
       <ion-col col-3>
-        <button ion-button icon-start clear small color="secondary">
+        <button ion-button icon-start clear small color="secondary" (click)="showComments(post.id)">
           <ion-icon name="text" small></ion-icon>
           <div> {{ post.comments.number }} Comments</div>
         </button>

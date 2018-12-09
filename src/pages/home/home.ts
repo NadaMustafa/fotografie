@@ -22,6 +22,11 @@ export class HomePage {
     modal.present();
   }
 
+  showComments(id:number) {
+    const modal = this.modalCtrl.create('comments-page', { id: id });
+    modal.present();
+  }
+
   onLikeClick(id: number) {
     this.postsService.togglePostLikeByID(id);
   }
