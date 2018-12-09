@@ -35,14 +35,14 @@
     <hr>
     <ion-row class="home-page__card-row">
       <ion-col col-2>
-        <button ion-button icon-only clear medium color="secondary"  (click)="onLikeClick(post.id)">
+        <button ion-button icon-only clear medium color="secondary" (click)="onLikeClick(post.id)">
           <ion-icon name="heart" color="primary" *ngIf="post.isLiked; else elseBlock"></ion-icon>
           <ng-template #elseBlock>
             <ion-icon name="heart"></ion-icon>
           </ng-template>
         </button>
       </ion-col>
-      <ion-col col-2>
+      <ion-col col-2 (click)="onCommentClick(post.id)">
         <button ion-button icon-only clear medium color="secondary">
           <ion-icon name="text"></ion-icon>
         </button>
