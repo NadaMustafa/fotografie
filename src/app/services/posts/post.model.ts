@@ -1,6 +1,7 @@
 export class Post {
   id: Number;
   date: Date;
+  isLiked: Boolean;
   owner: {
     name: String,
     avatar: String
@@ -10,21 +11,17 @@ export class Post {
   location: String;
   likes: {
     number: Number;
-    likers: [
-      {
+    likers: {
         name: String;
         avatar: String;
-      }
-    ];
+      }[];
   };
   comments: {
     number: Number;
-    commenters: [
-      {
+    commenters: {
         name: String;
         avatar: String;
         comment: String;
-      }
-    ];
+    }[];
   };
 }

@@ -18,18 +18,33 @@
         {{ post.caption }}
       </p>
     </ion-card-content>
-
-    <ion-row>
-      <ion-col>
-        <button ion-button icon-start clear medium color="secondary">
-          <ion-icon name="heart" color="primary"></ion-icon>
-          <div (click)="showLikes(post.id)"> {{ post.likes.number }} Likes</div>
+    <ion-row class="home-page__card-row">
+      <ion-col col-3>
+        <button ion-button icon-start clear small color="secondary" (click)="showLikes(post.id)">
+          <ion-icon name="heart" small></ion-icon>
+          <div>{{ post.likes.number }} Likes</div>
         </button>
       </ion-col>
-      <ion-col>
-        <button ion-button icon-start clear medium color="secondary">
-          <ion-icon name="text"></ion-icon>
+      <ion-col col-3>
+        <button ion-button icon-start clear small color="secondary">
+          <ion-icon name="text" small></ion-icon>
           <div> {{ post.comments.number }} Comments</div>
+        </button>
+      </ion-col>
+    </ion-row>
+    <hr>
+    <ion-row class="home-page__card-row">
+      <ion-col col-2>
+        <button ion-button icon-only clear medium color="secondary"  (click)="onLikeClick(post.id)">
+          <ion-icon name="heart" color="primary" *ngIf="post.isLiked; else elseBlock"></ion-icon>
+          <ng-template #elseBlock>
+            <ion-icon name="heart"></ion-icon>
+          </ng-template>
+        </button>
+      </ion-col>
+      <ion-col col-2>
+        <button ion-button icon-only clear medium color="secondary">
+          <ion-icon name="text"></ion-icon>
         </button>
       </ion-col>
     </ion-row>

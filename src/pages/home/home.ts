@@ -21,4 +21,8 @@ export class HomePage {
     const modal = this.modalCtrl.create('likes-page', { id: id });
     modal.present();
   }
+
+  onLikeClick(id: number) {
+    this.postsService.togglePostLikeByID(id);
+  }
 }
