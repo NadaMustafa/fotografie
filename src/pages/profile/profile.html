@@ -1,12 +1,14 @@
-<ion-header>
 
-  <ion-navbar>
-    <ion-title>{{ user.name! }}</ion-title>
-  </ion-navbar>
+<ion-header padding class="profile-page-header">
+
+  <ion-title text-center>{{ user.name }}</ion-title>
+  <ion-avatar class="profile-page-header__avatar">
+    <img [src]="user.avatar" />
+  </ion-avatar>
 
 </ion-header>
 
 
-<ion-content padding>
-
+<ion-content padding class="profile-page">
+  
 </ion-content>
