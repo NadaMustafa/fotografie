@@ -48,7 +48,7 @@ export const posts = [
       caption: "Nature at its finest",
       location: "Croatia",
       likes: {
-        number: 1,
+        number: 3,
         likers: [
           {
             name: "Stacey Rahman",

@@ -11,9 +11,11 @@ export class TabsPage {
 
   homePage: any;
   searchPage: any;
+  profilePage: any;
   constructor(){
     this.homePage = 'HomePage';
     this.searchPage = 'SearchPage';
+    this.profilePage = 'ProfilePage';
   }
 
 }
