@@ -12,6 +12,10 @@
 
 <ion-content padding>
   <ion-list>
+    <ion-item *ngIf="post.isLiked">
+      <ion-avatar item-start> <img [src]="user.avatar"/> </ion-avatar>
+      <h2>You</h2> 
+    </ion-item>
     <ion-item *ngFor="let liker of post.likes.likers">
       <ion-avatar item-start> <img [src]="liker.avatar"/> </ion-avatar>
       <h2>{{liker.name}}</h2>
