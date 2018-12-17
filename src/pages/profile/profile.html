@@ -9,6 +9,44 @@
 </ion-header>
 
 
-<ion-content padding class="profile-page">
-  
+<ion-content class="profile-page">
+  <ion-row justify-content-between no-padding>
+    <ion-col text-center>
+      {{ user.following }}
+    </ion-col>
+    <ion-col text-center>
+      {{ user.followers }}
+    </ion-col>
+  </ion-row>
+  <ion-row justify-content-between no-padding>
+    <ion-col text-center no-padding>
+      <span class="profile-page__following">Following</span>
+    </ion-col>
+    <ion-col text-center no-padding>
+      <span class="profile-page__following">Followers</span>
+    </ion-col>
+  </ion-row>
+  <ion-grid>
+    <ion-row>
+      <ion-col col-6 *ngFor="let post of posts" >
+        <ion-card class="profile-page__card">
+          <img [src]="post.image" class="profile-page__img"/>
+          <ion-row>
+            <ion-col col-4>
+              <button ion-button icon-start clear medium color="secondary">
+                <ion-icon name="heart" medium></ion-icon>
+                <div>{{ post.likes.number }}</div>
+              </button>
+            </ion-col>
+            <ion-col col-4>
+              <button ion-button icon-start clear medium color="secondary">
+                <ion-icon name="text" medium></ion-icon>
+                <div> {{ post.comments.number }}</div>
+              </button>
+            </ion-col>
+          </ion-row>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

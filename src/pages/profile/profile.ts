@@ -1,3 +1,5 @@
+import { PostsService } from './../../app/services/posts/posts.service';
+import { Post } from './../../app/services/posts/post.model';
 import { User } from './../../app/services/auth/user.model';
 import { AuthService } from './../../app/services/auth/auth.service';
 import { Component } from '@angular/core';
@@ -10,11 +12,13 @@ import { IonicPage } from 'ionic-angular';
 })
 export class ProfilePage {
   user: User;
-  constructor(private authService: AuthService) {
+  posts: Post[];
+  constructor(private authService: AuthService, private postsService: PostsService) {
   }
 
   ionViewWillLoad() {
     this.user = this.authService.getUser();
+    this.posts = this.postsService.getPosts();
   }
 
 }
